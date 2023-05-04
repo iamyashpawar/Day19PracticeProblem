@@ -10,8 +10,9 @@ public class RegexAssignementMain {
 
        RegexAssignement validation = new RegexAssignement();
 
-       validation.validateFirstName();
-       validation.validateLastName();
+//       validation.validateFirstName();
+//       validation.validateLastName();
+       validation.validateEmail();
 
 
     }

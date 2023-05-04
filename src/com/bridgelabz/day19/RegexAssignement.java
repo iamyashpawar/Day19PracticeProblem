@@ -34,4 +34,19 @@ public class RegexAssignement {
         }
     }
 
+    public void validateEmail() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your Email Address: ");
+        String emailAddress = sc.next();
+
+        Pattern pattern = Pattern.compile("^[a-z]{3}\\.[a-z]?{3}\\@[b][l]\\.[co]\\.[in]?$");
+        Matcher matcher =pattern.matcher(emailAddress);
+        if (matcher.matches()){
+            System.out.println("Valid Email Address");
+        }else {
+            System.out.println("Invalid Email Address");
+        }
+
+
+    }
 }
