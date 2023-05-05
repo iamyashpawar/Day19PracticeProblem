@@ -5,9 +5,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegexAssignement {
+
+    Scanner sc = new Scanner(System.in);
     
     public void validateFirstName(){
-        Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter your First Name: ");
         String firstName= sc.next();
 
@@ -22,7 +24,7 @@ public class RegexAssignement {
 
 
     public void validateLastName() {
-        Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter your Last Name: ");
         String lastName = sc.next();
         Pattern pattern = Pattern.compile("^[A-Z]{3}$");
@@ -35,7 +37,7 @@ public class RegexAssignement {
     }
 
     public void validateEmail() {
-        Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter your Email Address: ");
         String emailAddress = sc.next();
 
@@ -47,6 +49,20 @@ public class RegexAssignement {
             System.out.println("Invalid Email Address");
         }
 
+
+    }
+
+    public void validateMobile() {
+        System.out.print("Enter Mobile Number ");
+        String mobileNumber = sc.next();
+        Pattern pattern = Pattern.compile("^[9][1]\\s[0-9]{10}$");
+        Matcher matcher = pattern.matcher(mobileNumber);
+        if (matcher.matches()){
+            System.out.println("Valid Mobile Number");
+        }else {
+            System.out.println("Invalid Number");
+
+        }
 
     }
 }
